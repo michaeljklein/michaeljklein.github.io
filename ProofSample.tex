@@ -143,7 +143,7 @@ This is a proof of the lower bound of the pseudo-boolean function
 	
 		If $\varepsilon = 0$, then all the $a_i = 0$ and so the total is $0$ and the theorem holds.
 
-		If $\varepsilon = 1$, then exactly one $a_i \neq 0$, lets call it $a_p$ for positive. 
+		If $\varepsilon = 1$, then exactly one $a_i \neq 0$. Let us call it $a_p$ for positive. 
 		Then the total is equal to $k a_k$, because no pair of $a_i$'s can be non-zero. 
 		Taking the minimum $k = 1$, we get the total is $1$ and the theorem holds.
 
@@ -151,13 +151,13 @@ This is a proof of the lower bound of the pseudo-boolean function
 		
 	Suppose that there exists some $y$ such that $a_y = 1$ and for all $a_i = 0$, $i < y$. Let $y$ be the minimum such index. 
 		The contribution of $a_y$ is $y + 2 y \sum_{j=y+1}^{m} a_j$. Similarly the contribution of $a_{y-1}$, if we swap the values of $a_y$ and $a_{y-1}$, is $(y-1) + 2 (y-1) \sum_{j=y}^{m} a_j$. However, if we only swap these two values, the values, and thus the contributions of those values, with index greater than $y$ are left unchanged. 
-		Therefore, the contribution of $a_{y-1}$, if the values are swapped, is \\ $(y-1) + 2 (y-1) \sum_{j=y+1}^{m} a_j$.
+		Therefore, the contribution of $a_{y-1}$, if the values are swapped, is $$(y-1) + 2 (y-1) \sum_{j=y+1}^{m} a_j.$$
 		As this operation of swapping the first positive value above all the zero-values will always decrease the total, one may repeat this operation as long as there are positive values with higher index than some zero value.
 		Therefore, the minimum total is exactly the assignment where there is no non-positive assignment below a positive one, that is precisely the assignment with all positive assignments at the lowest possible indices.
 
 	Thus our minimum total, given that $\varepsilon < i$ implies that $a_i = 0$, is
 		%
-	$$\sum_{i=1}^{\varepsilon} i + \sum_{i=2}^{\varepsilon} \left( \sum_{j=1}^{i-1} 2 j a_j a_i \right) = \frac{1}{6} \varepsilon (\varepsilon + 1) (2 \varepsilon+ 1)$$
+	$$\sum_{i=1}^{\varepsilon} i + \sum_{i=2}^{\varepsilon} \left( \sum_{j=1}^{i-1} 2 j a_j a_i \right) = \frac{1}{6} \varepsilon (\varepsilon + 1) (2 \varepsilon+ 1).$$
 		%
 \end{proof}
 
