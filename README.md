@@ -3,7 +3,7 @@
 
 This is one of my favorite original, short proofs. The proof gives a closed form minimum for a certain function that acts on arbitrary-length boolean vectors and returns an integer. Additionally, to keep things interesting, the vector has a fixed Hamming Weight.
 
-Here's a description with sybols:
+Here's a description with symbols:
 
 ![Statement:](https://github.com/michaeljklein/michaeljklein.github.io/blob/master/formula.jpg "See paper for details!")
 
