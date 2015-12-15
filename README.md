@@ -1,7 +1,7 @@
 # Proof sample
 ## (Appx. 3 pages)
 
-This is one of my favorite original, short proofs. The proof gives a closed form minimum for a certain function that acts on arbitrary-length boolean vectors and returns an integer. Additionally, to keep things interesting, the vector has a fixed Hamming Weight.
+This is one of my favorite original, short proofs. The proof gives a closed form minimum for a certain function that acts on arbitrary-length boolean vectors and returns an integer. Additionally, the vector has a fixed Hamming Weight.
 
 Here's a description with symbols:
 
