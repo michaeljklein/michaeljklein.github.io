@@ -1,0 +1,139 @@
+\documentclass[12pt]{amsart}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{verbatim}
+\usepackage{amsthm}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}[section]
+
+\title{Proof Sample}
+
+\author{M.~J.~Klein}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\pagestyle{plain}
+
+\section{Introduction}
+	This problem came up in the process of searching for lower bounds on the number of cycles in a graph with certain properties.
+	
+	I chose this proof as my sample because it's my favorite short proof. The final bit of reasoning is analogous to reducing the problem to a halting problem and solving that halting problem. 
+\section{Proof}
+
+This is a proof of the lower bound of the pseudo-boolean function 
+	$$f(A) := \sum_{i=1}^{m-1} \left( \sum_{j=1}^{i} a_j \right)^2$$ 
+	given that $A \in \mathbb{B}^{m-1}$, $\varepsilon = \sum_{i=1}^{m-1} a_i = \text{constant}$, and $m \geq 2$. 
+	In other words, this is an optimization of the function $f : \mathbb{B}^{m-1} \to \mathbb{Z}$, where the binary input vector has a given Hamming Weight.
+
+\begin{lemma}
+\label{lem10}
+	$$\sum_{i = 1}^{m-1} \sum_{j=1}^{i} a_j = m \sum_{i = 1}^{m-1} a_i - \sum_{i = 1}^{m-1} i a_i$$
+\end{lemma}
+\begin{proof}
+	$$\sum_{i = 1}^{m-1} \sum_{j=1}^{i} a_j = (a_1) + (a_1 + a_2) + (a_1 + a_2 + a_3) + \dots$$
+	We have $(m-i)$ copies of $a_i$ so \\
+	$$\sum_{i = 1}^{m-1} \sum_{j=1}^{i} a_j = \sum_{i = 1}^{m-1} (m - i) a_i = m \sum_{i = 1}^{m-1} a_i - \sum_{i = 1}^{m-1} i a_i$$
+\end{proof}
+
+
+\begin{lemma}
+\label{lem11}
+	$$\sum_{i = 1}^{m-1} \sum_{j=1}^{i} a_j i
+	= \frac{m^2}{2} \sum_{i=1}^{m-1} a_i
+	- \frac{m}{2} \sum_{i=1}^{m-1} a_i
+	+ \frac{1}{2} \sum_{i=1}^{m-1} i a_i
+	- \frac{1}{2} \sum_{i=1}^{m-1} i^2 a_i$$
+\end{lemma}
+\begin{proof}
+	\begin{align*}
+		\sum_{i = 1}^{m-1} \sum_{j=1}^{i} a_j i &= 1(a_1) + 2(a_1 + a_2) + 3(a_1 + a_2 + a_3) + \dots \\
+		&= a_1 \sum_{j=1}^{m-1} j + a_2 \sum_{j=2}^{m-1} j + a_3 \sum_{j=3}^{m-1} j + \dots
+	\end{align*}
+	But $\sum_{j=i}^{m-1} j = (m - i) (m + i - 1)/2$ so then we have:
+	\begin{align*}
+		\sum_{i = 1}^{m-1} \sum_{j=1}^{i} a_j i &= \sum_{i=1}^{m-1} a_i (m - i) (m + i - 1)/2 \\
+									  &= \frac{1}{2} \sum_{i=1}^{m-1} a_i (m^2 - m + i - i^2) \\
+									  &= \frac{m^2}{2} \sum_{i=1}^{m-1} a_i
+	- \frac{m}{2} \sum_{i=1}^{m-1} a_i
+	+ \frac{1}{2} \sum_{i=1}^{m-1} i a_i
+	- \frac{1}{2} \sum_{i=1}^{m-1} i^2 a_i
+	\end{align*}
+\end{proof}
+
+\begin{lemma}
+\label{lem12}
+	$$\sum_{i=1}^{m} \left( \sum_{j=1}^{i} a_{m+1-j} \right)^2 = \sum_{i=1}^{m} i a_i  + \sum_{i=2}^{m} \left( \sum_{j=1}^{i-1} 2 j a_j a_i \right)$$
+\end{lemma}
+\begin{proof}
+	Note that 
+		%
+	$$\left( \sum_{j=1}^{i} a_{m+1-j} \right)^2 = \sum_{j=1}^{i} a_{m+1-j}^2 + 2 \sum_{j<k}^{i} a_{m+1-j} a_{m+1-k}$$
+		%
+	But $a_{m+1-j}^2 = a_{m+1-j}$, because $a_{m+1-j} \in \{ 0, 1 \}$ so:
+		%
+	$$\sum_{j=1}^{i} a_{m+1-j}^2 = \sum_{j=1}^{i} a_{m+1-j}$$
+		%
+	Thus 
+		%
+	$$\sum_{i=1}^{m} \left( \sum_{j=1}^{i} a_{m+1-j} \right)^2 = 
+		   \sum_{i=1}^{m} \left( \sum_{j=1}^{i} a_{m+1-j}                     \right)
+		+ \sum_{i=1}^{m} 2 \left( \sum_{j<k}^{i} a_{m+1-j} a_{m+1-k} \right)
+	$$
+		%
+	But note that, because there are $i$ copies of $a_{m+1-(m+1-i)}$,
+		%
+	$$\sum_{i=1}^{m} \left( \sum_{j=1}^{i} a_{m+1-j} \right) = \sum_{i=1}^{m} i a_i$$
+		%
+	Likewise, there are $i$ copies of each distinct pair of $a$'s, so
+		%
+	$$\sum_{i=1}^{m} 2 \left( \sum_{j<k}^{i} a_{m+1-j} a_{m+1-k} \right) = \sum_{i=1}^{m} \left( \sum_{j=2}^{i-1} 2 j a_j a_i \right)$$
+		%
+\end{proof} 
+
+
+\begin{theorem}
+\label{lem13}
+	$$\frac{1}{6} \varepsilon (\varepsilon + 1) (2 \varepsilon+ 1) \leq \sum_{i=1}^{m-1} \left( \sum_{j=1}^{i} a_j \right)^2$$
+\end{theorem}
+\begin{proof}
+	We begin by reversing the indices of the $a_j$'s and applying Lemma \ref{lem12} to get
+		%
+	$$\sum_{i=1}^{m-1} \left( \sum_{j=1}^{i} a_j \right)^2 = \sum_{i=1}^{m} i a_i  + \sum_{i=2}^{m} \left( \sum_{j=1}^{i-1} 2 j a_j a_i \right)$$
+		%
+	Recall that $\varepsilon = \sum_{i=1}^{m-1} a_i$.
+	We first consider the trivial cases of $\varepsilon = 0, 1$.
+	
+		If $\varepsilon = 0$, then all the $a_i = 0$ and so the total is $0$ and the theorem holds.
+
+		If $\varepsilon = 1$, then exactly one $a_i \neq 0$, lets call it $a_p$ for positive. 
+		Then the total is equal to $k a_k$, because no pair of $a_i$'s can be non-zero. 
+		Taking the minimum $k = 1$, we get the total is $1$ and the theorem holds.
+
+	Note that if $a_z$ is positive, it adds exactly $z + 2 z \sum_{j=z+1}^{m} a_j$ to the total, independent of the rest.
+		
+	Suppose that there exists some $y$ such that $a_y = 1$ and for all $a_i = 0$, $i < y$. Let $y$ be the minimum such index. 
+		The contribution of $a_y$ is $y + 2 y \sum_{j=y+1}^{m} a_j$. Similarly the contribution of $a_{y-1}$, if we swap the values of $a_y$ and $a_{y-1}$, is $(y-1) + 2 (y-1) \sum_{j=y}^{m} a_j$. However, if we only swap these two values, the values, and thus the contributions of those values, with index greater than $y$ are left unchanged. 
+		Therefore, the contribution of $a_{y-1}$, if the values are swapped, is \\ $(y-1) + 2 (y-1) \sum_{j=y+1}^{m} a_j$.
+		As this operation of swapping the first positive value above all the zero-values will always decrease the total, one may repeat this operation as long as there are positive values with higher index than some zero value.
+		Therefore, the minimum total is exactly the assignment where there is no non-positive assignment below a positive one, that is precisely the assignment with all positive assignments at the lowest possible indices.
+
+	Thus our minimum total, given that $\varepsilon < i$ implies that $a_i = 0$, is
+		%
+	$$\sum_{i=1}^{\varepsilon} i + \sum_{i=2}^{\varepsilon} \left( \sum_{j=1}^{i-1} 2 j a_j a_i \right) = \frac{1}{6} \varepsilon (\varepsilon + 1) (2 \varepsilon+ 1)$$
+		%
+\end{proof}
+
+
+\end{document}
