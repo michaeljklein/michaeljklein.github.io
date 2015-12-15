@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.30)  14 DEC 2015 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.30)  14 DEC 2015 21:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -358,7 +358,7 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \c@definition=\count101
 \c@lemma=\count102
 
-No file ProofSample.aux.
+(./ProofSample.aux)
 \openout1 = `ProofSample.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -374,6 +374,7 @@ LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -396,42 +397,32 @@ Overfull \vbox (2.28343pt too high) has occurred while \output is active []
 
 
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
-
-LaTeX Warning: Reference `lem12' on page 3 undefined on input line 111.
-
-[3] [4] (./ProofSample.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[2] [3] [4] (./ProofSample.aux) ) 
 Here is how much of TeX's memory you used:
- 2316 strings out of 493089
- 26571 string characters out of 6134841
+ 2318 strings out of 493089
+ 26603 string characters out of 6134841
  90164 words of memory out of 5000000
  5634 multiletter control sequences out of 15000+600000
  12573 words of font info for 51 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  34i,8n,31p,356b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ProofSample.pdf (4 pages, 144517 bytes).
+</usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/sy
+mbols/msam10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb>
+Output written on ProofSample.pdf (4 pages, 144337 bytes).
 PDF statistics:
  77 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
