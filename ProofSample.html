@@ -1,0 +1,604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Proof Sample</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="ProofSample.tex"> 
+<link rel="stylesheet" type="text/css" href="ProofSample.css"> 
+</head><body 
+>
+  <div class="maketitle">
+  <h2 class="titleHead">
+PROOF SAMPLE
+  </h2><div class="authors"><span class="author" >
+<span 
+class="cmr-10">M.</span><span 
+class="cmr-10">&#x00A0;J.</span><span 
+class="cmr-10">&#x00A0;KLEIN</span>
+  </span></div>
+<div class="submaketitle">
+  <div class="date" >
+<!--l. 52--><p class="indent" >  <span 
+class="cmti-12">Date</span>:&#x00A0;November 21, 2017.</div></div></div>
+  <h3 class="sectionHead"><span class="titlemark">1. </span> <a 
+ id="x1-10001"></a>Introduction</h3>
+<!--l. 56--><p class="noindent" >This problem came up in the process of searching for lower bounds on the
+number of cycles in a graph with certain properties.
+<!--l. 58--><p class="indent" >  I chose this proof as my sample because it&#8217;s my favorite short proof. The
+final bit of reasoning is analogous to reducing the problem to a halting
+problem and solving that halting problem.
+  <h3 class="sectionHead"><span class="titlemark">2. </span> <a 
+ id="x1-20002"></a>Proof</h3>
+<!--l. 61--><p class="noindent" >This is a proof of the lower bound of the pseudo-boolean function
+  <center class="math-display" >
+<img 
+src="ProofSample0x.png" alt="            (       )
+        m&#x2211; -1  &#x2211;i      2
+f(A ) :=          aj
+         i=1   j=1   " class="math-display" ></center>
+
+given that <span 
+class="cmmi-12">A </span><span 
+class="cmsy-10x-x-120">&#x2208; </span><span 
+class="msbm-10x-x-120">B</span><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup>, <span 
+class="cmmi-12">&#x03B5; </span>= <span 
+class="cmex-10x-x-120">&#x2211;</span><sub>
+<span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">i</span></sub> = constant, and <span 
+class="cmmi-12">m </span><span 
+class="cmsy-10x-x-120">&#x2265; </span>2. In other
+words, this is an optimization of the function <span 
+class="cmmi-12">f </span>: <span 
+class="msbm-10x-x-120">B</span><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup> <span 
+class="cmsy-10x-x-120">&#x2192; </span><span 
+class="msbm-10x-x-120">&#x2124;</span>, where the
+binary input vector has a given Hamming Weight.
+  <div class="newtheorem">
+<!--l. 66--><p class="noindent" ><span class="head">
+<a 
+ id="x1-2001r1"></a>
+<span 
+class="cmbx-12">Lemma 2.1.</span>  </span>
+  <center class="math-display" >
+<img 
+src="ProofSample1x.png" alt="m&#x2211; -1&#x2211; i        m&#x2211; -1     m&#x2211;-1
+        aj = m     ai -     iai
+ i=1 j=1         i=1      i=1
+" class="math-display" ></center>
+  </div>
+  <div class="proof">
+<!--l. 71--><p class="indent" >  <span class="head">
+<span 
+class="cmti-12">Proof.</span> </span>
+  <center class="math-display" >
+<img 
+src="ProofSample2x.png" alt="m&#x2211; -1&#x2211;i
+        aj = (a1) + (a1 + a2) + (a1 + a2 + a3) + ...
+ i=1 j=1
+" class="math-display" ></center> We have (<span 
+class="cmmi-12">m </span><span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">i</span>) copies of <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">i</span></sub> so <br 
+class="newline" />
+  <center class="math-display" >
+<img 
+src="ProofSample3x.png" alt="m -1  i      m- 1              m- 1    m -1
+ &#x2211;  &#x2211;        &#x2211;                 &#x2211;        &#x2211;
+        aj =     (m  - i)ai = m     ai -    iai
+ i=1  j=1      i=1               i=1      i=1
+" class="math-display" ></center> <span class="qed"><span 
+class="msam-10x-x-120">&#x25A1;</span></span>
+  </div>
+  <div class="newtheorem">
+<!--l. 77--><p class="noindent" ><span class="head">
+<a 
+ id="x1-2002r2"></a>
+<span 
+class="cmbx-12">Lemma 2.2.</span>  </span>
+  <center class="math-display" >
+<img 
+src="ProofSample4x.png" alt="m-1  i           m-1        m- 1      m -1        m-1
+&#x2211;  &#x2211;         m2- &#x2211;       m- &#x2211;        1&#x2211;         1-&#x2211;   2
+       aji =  2     ai -  2     ai + 2    iai - 2    i ai
+i=1 j=1           i=1        i=1        i=1         i=1
+" class="math-display" ></center>
+  </div>
+  <div class="proof">
+<!--l. 86--><p class="indent" >  <span class="head">
+<span 
+class="cmti-12">Proof.</span> </span>
+<table 
+class="align-star">
+       <tr><td 
+class="align-odd"><span 
+class="cmex-10x-x-120">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+<sub><span 
+class="cmmi-8">j</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">i</span></sup><span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">j</span></sub><span 
+class="cmmi-12">i</span></td>       <td 
+class="align-even"> = 1(<span 
+class="cmmi-12">a</span><sub><span 
+class="cmr-8">1</span></sub>) + 2(<span 
+class="cmmi-12">a</span><sub><span 
+class="cmr-8">1</span></sub> + <span 
+class="cmmi-12">a</span><sub><span 
+class="cmr-8">2</span></sub>) + 3(<span 
+class="cmmi-12">a</span><sub><span 
+class="cmr-8">1</span></sub> + <span 
+class="cmmi-12">a</span><sub><span 
+class="cmr-8">2</span></sub> + <span 
+class="cmmi-12">a</span><sub><span 
+class="cmr-8">3</span></sub>) + <span 
+class="cmmi-12">&#x2026;</span></td>                   <td 
+class="align-label"></td>       <td 
+class="align-label">
+       </td></tr><tr><td 
+class="align-odd"></td>                            <td 
+class="align-even"> = <span 
+class="cmmi-12">a</span><sub><span 
+class="cmr-8">1</span></sub> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+   <sub><span 
+class="cmmi-8">j</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">j </span>+ <span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmr-8">2</span></sub> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+<sub><span 
+class="cmmi-8">j</span><span 
+class="cmr-8">=2</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">j </span>+ <span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmr-8">3</span></sub> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+<sub><span 
+class="cmmi-8">j</span><span 
+class="cmr-8">=3</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">j </span>+ <span 
+class="cmmi-12">&#x2026;</span></td>       <td 
+class="align-label"></td>       <td 
+class="align-label"></td></tr></table>
+But <span 
+class="cmex-10x-x-120">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">j</span><span 
+class="cmr-8">=</span><span 
+class="cmmi-8">i</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">j </span>= (<span 
+class="cmmi-12">m </span><span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">i</span>)(<span 
+class="cmmi-12">m </span>+ <span 
+class="cmmi-12">i </span><span 
+class="cmsy-10x-x-120">- </span>1)<span 
+class="cmmi-12">&#x2215;</span>2 so then we have:
+
+<table 
+class="align-star">
+      <tr><td 
+class="align-odd"> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+<sub><span 
+class="cmmi-8">j</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">i</span></sup><span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">j</span></sub><span 
+class="cmmi-12">i</span></td>      <td 
+class="align-even"> = <span 
+class="cmex-10x-x-120">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">i</span></sub>(<span 
+class="cmmi-12">m </span><span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">i</span>)(<span 
+class="cmmi-12">m </span>+ <span 
+class="cmmi-12">i </span><span 
+class="cmsy-10x-x-120">- </span>1)<span 
+class="cmmi-12">&#x2215;</span>2</td>                                          <td 
+class="align-label"></td>      <td 
+class="align-label">
+      </td></tr><tr><td 
+class="align-odd"></td>                          <td 
+class="align-even"> = <img 
+src="ProofSample5x.png" alt="1-
+2"  class="frac" align="middle"> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+    <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">i</span></sub>(<span 
+class="cmmi-12">m</span><sup><span 
+class="cmr-8">2</span></sup> <span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">m </span>+ <span 
+class="cmmi-12">i </span><span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">i</span><sup><span 
+class="cmr-8">2</span></sup>)</td>                                           <td 
+class="align-label"></td>      <td 
+class="align-label">
+      </td></tr><tr><td 
+class="align-odd"></td>                          <td 
+class="align-even"> = <img 
+src="ProofSample6x.png" alt="m2
+---
+ 2"  class="frac" align="middle"> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+     <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">i</span></sub> <span 
+class="cmsy-10x-x-120">-</span><img 
+src="ProofSample7x.png" alt="m
+--
+2"  class="frac" align="middle"> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+    <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">i</span></sub> + <img 
+src="ProofSample8x.png" alt="1
+--
+2"  class="frac" align="middle"> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+    <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">ia</span><sub>
+<span 
+class="cmmi-8">i</span></sub> <span 
+class="cmsy-10x-x-120">-</span><img 
+src="ProofSample9x.png" alt="1
+--
+2"  class="frac" align="middle"> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+    <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">i</span><sup><span 
+class="cmr-8">2</span></sup><span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">i</span></sub></td>      <td 
+class="align-label"></td>      <td 
+class="align-label"></td></tr></table>
+<span class="qed"><span 
+class="msam-10x-x-120">&#x25A1;</span></span>
+  </div>
+  <div class="newtheorem">
+<!--l. 101--><p class="noindent" ><span class="head">
+<a 
+ id="x1-2003r3"></a>
+<span 
+class="cmbx-12">Lemma 2.3.</span>  </span>
+  <center class="math-display" >
+<img 
+src="ProofSample10x.png" alt="    (           )2                 (          )
+&#x2211;m    &#x2211;i              &#x2211;m       &#x2211;m    i-&#x2211; 1
+          am+1-j    =     iai +          2jajai
+ i=1   j=1             i=1      i=2   j=1
+" class="math-display" ></center>
+  </div>
+  <div class="proof">
+
+<!--l. 106--><p class="indent" >  <span class="head">
+<span 
+class="cmti-12">Proof.</span> </span>Note that
+  <center class="math-display" >
+<img 
+src="ProofSample11x.png" alt="(           )
+  &#x2211;i          2   &#x2211;i             &#x2211;i
+      am+1- j   =     a2m+1- j + 2    am+1-jam+1 -k
+  j=1             j=1            j&#x003C;k
+" class="math-display" ></center> But <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">m</span><span 
+class="cmr-8">+1</span><span 
+class="cmsy-8">-</span><span 
+class="cmmi-8">j</span></sub><sup><span 
+class="cmr-8">2</span></sup> = <span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">m</span><span 
+class="cmr-8">+1</span><span 
+class="cmsy-8">-</span><span 
+class="cmmi-8">j</span></sub>, because <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">m</span><span 
+class="cmr-8">+1</span><span 
+class="cmsy-8">-</span><span 
+class="cmmi-8">j</span></sub> <span 
+class="cmsy-10x-x-120">&#x2208;{</span>0<span 
+class="cmmi-12">, </span>1<span 
+class="cmsy-10x-x-120">} </span>so:
+  <center class="math-display" >
+<img 
+src="ProofSample12x.png" alt="&#x2211; i           &#x2211;i
+    a2     =     a
+     m+1 -j        m+1-j
+j=1           j=1
+" class="math-display" ></center> Thus
+  <center class="math-display" >
+<img 
+src="ProofSample13x.png" alt=" m  (  i        )2     m (   i        )    m   (   i               )
+&#x2211;    &#x2211;                &#x2211;    &#x2211;              &#x2211;      &#x2211;
+         am+1 -j   =           am+1 -j  +     2      am+1 -jam+1- k
+i=1   j=1              i=1  j=1             i=1    j&#x003C;k
+" class="math-display" ></center> But note that, because there are <span 
+class="cmmi-12">i </span>copies of <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">m</span><span 
+class="cmr-8">+1</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">(</span><span 
+class="cmmi-8">m</span><span 
+class="cmr-8">+1</span><span 
+class="cmsy-8">-</span><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">)</span></sub>,
+  <center class="math-display" >
+<img 
+src="ProofSample14x.png" alt="   (            )
+&#x2211;m   &#x2211; i            &#x2211;m
+         am+1- j  =     iai
+i=1  j=1             i=1
+" class="math-display" ></center> Likewise, there are <span 
+class="cmmi-12">i </span>copies of each distinct pair of <span 
+class="cmmi-12">a</span>&#8217;s, so
+  <center class="math-display" >
+<img 
+src="ProofSample15x.png" alt="&#x2211;m   ( &#x2211;i               )    &#x2211;m  ( i&#x2211;-1      )
+    2      a      a        =          2ja  a
+            m+1- j m+1-k                  j i
+i=1    j&#x003C;k                    i=1   j=2
+" class="math-display" ></center> <span class="qed"><span 
+class="msam-10x-x-120">&#x25A1;</span></span>
+  </div>
+  <div class="newtheorem">
+<!--l. 132--><p class="noindent" ><span class="head">
+<a 
+ id="x1-2004r1"></a>
+
+<span 
+class="cmbx-12">Theorem 1.</span>  </span>
+  <center class="math-display" >
+<img 
+src="ProofSample16x.png" alt="                        (       )2
+1                   m&#x2211; -1  &#x2211;i
+--&#x03B5;(&#x03B5; + 1)(2 &#x03B5; + 1) &#x2264;          aj   = f (A)
+6                    i=1   j=1
+" class="math-display" ></center>
+  </div>
+  <div class="proof">
+<!--l. 137--><p class="indent" >  <span class="head">
+<span 
+class="cmti-12">Proof.</span> </span>We  begin  by  reversing  the  indices  of  the  <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">j</span></sub>&#8217;s  and  applying
+Lemma <a 
+href="#x1-2003r3">2.3<!--tex4ht:ref: lem12 --></a> to get
+  <center class="math-display" >
+<img 
+src="ProofSample17x.png" alt="m&#x2211;-1( &#x2211; i   )2    &#x2211;m       &#x2211;m ( &#x2211;i-1       )
+         a    =     ia +           2ja a
+          j           i               j i
+i=1   j=1         i=1      i=2  j=1
+" class="math-display" ></center> Recall that <span 
+class="cmmi-12">&#x03B5; </span>=  <span 
+class="cmex-10x-x-120">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">m</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">i</span></sub>. We first consider the trivial cases of
+<span 
+class="cmmi-12">&#x03B5; </span>= 0<span 
+class="cmmi-12">, </span>1.
+
+<!--l. 144--><p class="indent" >  If <span 
+class="cmmi-12">&#x03B5; </span>= 0, then all the <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">i</span></sub> = 0 and so the total is 0 and the theorem
+holds.
+<!--l. 146--><p class="indent" >  If <span 
+class="cmmi-12">&#x03B5; </span>= 1, then exactly one <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-12">&#x2260;</span>0. Let us call it <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">p</span></sub> for positive. Then the
+total is equal to <span 
+class="cmmi-12">ka</span><sub><span 
+class="cmmi-8">k</span></sub>, because no pair of <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">i</span></sub>&#8217;s can be non-zero. Taking
+the minimum <span 
+class="cmmi-12">k </span>= 1, we get the total is 1 and the theorem holds.
+<!--l. 150--><p class="indent" >  Note that if <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">z</span></sub> is positive, it adds exactly <span 
+class="cmmi-12">z </span>+ 2<span 
+class="cmmi-12">z</span> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">j</span><span 
+class="cmr-8">=</span><span 
+class="cmmi-8">z</span><span 
+class="cmr-8">+1</span></sub><sup><span 
+class="cmmi-8">m</span></sup><span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">j</span></sub> to the
+total, independent of the rest.
+<!--l. 152--><p class="indent" >  Suppose that there exists some <span 
+class="cmmi-12">y </span>such that <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">y</span></sub> = 1 and for all <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">i</span></sub> = 0,
+<span 
+class="cmmi-12">i &#x003C; y</span>. Let <span 
+class="cmmi-12">y </span>be the minimum such index. The contribution of <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">y</span></sub>  is
+<span 
+class="cmmi-12">y </span>+ 2<span 
+class="cmmi-12">y</span> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">j</span><span 
+class="cmr-8">=</span><span 
+class="cmmi-8">y</span><span 
+class="cmr-8">+1</span></sub><sup><span 
+class="cmmi-8">m</span></sup><span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">j</span></sub>. Similarly the contribution of <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">y</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sub>, if we swap the
+values of <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">y</span></sub> and <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">y</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sub>, is (<span 
+class="cmmi-12">y </span><span 
+class="cmsy-10x-x-120">- </span>1) + 2(<span 
+class="cmmi-12">y </span><span 
+class="cmsy-10x-x-120">- </span>1) <span 
+class="cmex-10x-x-120">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">j</span><span 
+class="cmr-8">=</span><span 
+class="cmmi-8">y</span></sub><sup><span 
+class="cmmi-8">m</span></sup><span 
+class="cmmi-12">a</span><sub>
+<span 
+class="cmmi-8">j</span></sub>. However, if we
+only swap these two values, the values, and thus the contributions of
+those values, with index greater than <span 
+class="cmmi-12">y </span>are left unchanged. Therefore,
+the contribution of <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">y</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sub>, if the values are swapped, is
+  <center class="math-display" >
+<img 
+src="ProofSample18x.png" alt="                   &#x2211;m
+(y - 1) + 2(y - 1)     aj.
+                  j=y+1
+" class="math-display" ></center> As this operation of swapping the first positive value above all the
+zero-values will always decrease the total, one may repeat this operation
+as long as there are positive values with higher index than some zero
+value. Therefore, the minimum total is exactly the assignment where
+there is no non-positive assignment below a positive one, that is precisely
+the assignment with all positive assignments at the lowest possible
+indices.
+<!--l. 158--><p class="indent" >  Thus our minimum total, given that <span 
+class="cmmi-12">&#x03B5; &#x003C; i </span>implies that <span 
+class="cmmi-12">a</span><sub><span 
+class="cmmi-8">i</span></sub> = 0, is
+
+  <center class="math-display" >
+<img 
+src="ProofSample19x.png" alt="           (          )
+&#x2211;&#x03B5;     &#x2211;&#x03B5;   &#x2211;i- 1           1
+   i +          2jajai   = -&#x03B5; (&#x03B5; + 1)(2&#x03B5; + 1).
+i=1    i=2   j=1            6
+" class="math-display" ></center> <span class="qed"><span 
+class="msam-10x-x-120">&#x25A1;</span></span>
+  </div>
+   
+</body></html> 
+
+
+
