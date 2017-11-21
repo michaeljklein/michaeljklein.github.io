@@ -1,8 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>A sample proof by Michael J Klein</title>
+
+  <style type="text/css">
+    body, html
+    {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: auto;
+    }
+
+    #content
+    {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0px;
+    }
+
+    iframe
+    {
+      height: -webkit-fill-available;
+      frameborder: 0;
+      hspace: 0;
+      width: inherit;
+      scrolling: auto
+    }
+  </style>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+</head>
+
+<body bgcolor=white>
+
 <article>
   <header>
     <h1>A sample proof by Michael J Klein</h1>
     <p> <a href="https://github.com/michaeljklein">https://github.com/michaeljklein</a> </p>
+
+    <div>
+      <ul>
+        <li>Source code <a href="https://github.com/michaeljklein/michaeljklein.github.io">On Github</a>.
+      </ul>
+    </div>
+
+    <div>
+      <hr>
+    </div>
+
   </header>
-  <p><embed src="ProofSample.pdf" width="800px" height="1000px"></p>
+
+  <div id="fancybox-content" style="border-width: 10px; width: 100%; height: max-content">
+    <iframe id="fancybox-frame" name="fancybox-frame1511293353417" src="ProofSample.html">
+    </iframe>
+  </div>
+
 </article>
+
+</body>
+</html>
 
